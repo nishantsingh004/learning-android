@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, UploadFile, File
 from sqlalchemy.orm import Session
 from backend.app.db.session import get_db
 from backend.app.services.reco import get_recommendation_for_field
-from app.schemas.reco import RecommendationOut
+from backend.app.schemas.reco.reco import RecommendationOut
 from app.services import voice as voice_service
 from sqlalchemy import text
 

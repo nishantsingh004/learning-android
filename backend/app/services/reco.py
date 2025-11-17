@@ -1,4 +1,4 @@
-from app.schemas.reco import RecommendationOut, CropScore
+from backend.app.schemas.reco import RecommendationOut, CropScore
 
 def get_recommendation_for_field(field_id: int) -> RecommendationOut:
     top1 = CropScore(crop_id=1, name_en="Mustard", name_hi="सरसों",
