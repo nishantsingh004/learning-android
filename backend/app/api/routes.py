@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from backend.app.db.session import get_db
 from backend.app.services.reco import get_recommendation_for_field
 from backend.app.schemas.reco import RecommendationOut
-from app.services import voice as voice_service
+from backend.app.services import voice as voice_service
 from sqlalchemy import text
 
 router = APIRouter()
