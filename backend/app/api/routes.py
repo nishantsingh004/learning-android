@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends, UploadFile, File
 from sqlalchemy.orm import Session
-from app.db.session import get_db
+from backend.app.db.session import get_db
 from app.services.reco import get_recommendation_for_field
 from app.schemas.reco import RecommendationOut
 from app.services import voice as voice_service
