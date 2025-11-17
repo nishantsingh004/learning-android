@@ -1,0 +1,63 @@
+{
+  "info": {
+    "name": "Kifagri MVP",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/health"
+      }
+    },
+    {
+      "name": "Recommendation (field 1)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/recommendations/1"
+      }
+    },
+    {
+      "name": "Create Advisory",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8080/api/advisories",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"farmer_id\": 1, \"field_id\": 1, \"crop_id\": 1, \"text\": \"Try mustard on 20% area\"}"
+        }
+      }
+    },
+    {
+      "name": "List Advisories (farmer 1)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/advisories/1"
+      }
+    },
+    {
+      "name": "Create Feedback",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": "http://localhost:8080/api/feedback",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"farmer_id\": 1, \"advisory_id\": 1, \"rating\": 5, \"comment\": \"\\u0938\\u092e\\u091d \\u092e\\u0947\\u0902 \\u0906\\u092f\\u093e\"}"
+        }
+      }
+    }
+  ]
+}
